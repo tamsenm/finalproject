@@ -10,7 +10,7 @@ fs.readFile('profile.json', (err, data) => {
 
 /*for writing after update
 let student = {
-    name: 'Mike',
+    name: 'Aladdin',
     age: 23,
     gender: 'Male',
     department: 'English',
