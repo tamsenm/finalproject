@@ -20,7 +20,7 @@ class OpenScreen extends React.Component {
             onPress={() => this.props.navigation.navigate('Profile')}>
             <Image
               source={{ uri: 'https://i.ibb.co/7XjSBM2/buttontext.png' }}
-              style={{ height: 26, width: 187 }}
+              style={{ height: 27.1, width: 187 }}
             ></Image>
           </TouchableOpacity>
         </View>
