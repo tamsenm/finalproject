@@ -2,27 +2,6 @@ import React from 'react';
 import { View, Image, Text, Button, TouchableOpacity, StyleSheet} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-<<<<<<< HEAD
-=======
-const fs = require('fs');
-fs.readFile('profile.json', (err, data) => {
-    if (err) throw err;
-    let profile = JSON.parse(data);
-});
-
-/*for writing after update
-let student = {
-    name: 'Aladdin',
-    age: 23,
-    gender: 'Male',
-    department: 'English',
-    car: 'Honda'
-};
-
-let data = JSON.stringify(student);
-fs.writeFileSync('student-2.json', data);*/
-
->>>>>>> f2a46849841671dcec83fd20823a1eb8e907ce30
 class OpenScreen extends React.Component {
   static navigationOptions = {
     header:null
