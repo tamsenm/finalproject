@@ -2,6 +2,24 @@ import React from 'react';
 import { View, Image, Text, Button, TouchableOpacity, StyleSheet} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
+const fs = require('fs');
+fs.readFile('profile.json', (err, data) => {
+    if (err) throw err;
+    let profile = JSON.parse(data);
+});
+
+/*for writing after update
+let student = {
+    name: 'Mike',
+    age: 23,
+    gender: 'Male',
+    department: 'English',
+    car: 'Honda'
+};
+
+let data = JSON.stringify(student);
+fs.writeFileSync('student-2.json', data);*/
+
 class OpenScreen extends React.Component {
   static navigationOptions = {
     header:null
@@ -169,6 +187,11 @@ class HabitsScreen extends React.Component {
     );
   }
 }
+/*TEST*/
+var startwith = "Profile"
+if (!profile['completed']) {
+  startwith = "Open"
+}
 
 const AppNavigator = createStackNavigator(
   {
@@ -178,7 +201,8 @@ const AppNavigator = createStackNavigator(
     Habits: HabitsScreen,
   },
   {
-    initialRouteName: "Open"
+
+    initialRouteName: startwith
   }
 );
 const AppContainer = createAppContainer(AppNavigator);

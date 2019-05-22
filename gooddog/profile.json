@@ -1,0 +1,13 @@
+{
+    "completed": false,
+    "name": "n/a",
+    "birthday": "n/a",
+    "gender": "n/a",
+    "breed": "n/a",
+    "vax": [
+      {
+        "lyme": false,
+        "measles": false,
+      }
+    ]
+}
