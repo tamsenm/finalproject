@@ -42,9 +42,13 @@ class ProfileScreen extends React.Component {
               source = {{uri: 'https://i.ibb.co/7Xm4kkp/pitbull.png'}}
               style = {{height: 100, width: 100}}
             ></Image>
-            <Text>Name {this.state.name}</Text>
+            <Text>Name: {this.state.name}</Text>
+            <Text>Breed: {this.state.breed}</Text>
           </View>
           <View style = {styles.profContent}>
+            <Text>Gender: {this.state.gender}</Text>
+            <Text>Birthday: {this.state.birth}</Text>
+            <Text>Vaccinations: {this.state.vax}</Text>
           </View>
         </View>
         <View style={styles.footer}>
