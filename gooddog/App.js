@@ -159,7 +159,7 @@ class HabitsScreen extends React.Component {
               style = {styles.navButton}
               onPress={() => this.props.navigation.navigate('Habits')}>
               <Image
-                source={{ uri: 'https://i.ibb.co/42rHYYH/habits.png' }}
+                source={{ uri: 'https://i.ibb.co/MnSqhtr/health-report.png' }}
                 style={{ height: 50, width: 50 }}
               ></Image>
             </TouchableOpacity>
