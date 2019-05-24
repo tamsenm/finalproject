@@ -12,12 +12,12 @@ class OpenScreen extends React.Component {
         <View style = {styles.openTop}>
           <Image
             source={{ uri: 'https://i.ibb.co/gTCsm78/title.png' }}
-            style={{ height: 107, width: 305 }}
+            style={{ height: 107, width: 305.4 }}
           ></Image>
         </View>
         <View style = {styles.openBottom}>
           <TouchableOpacity style = {styles.getStarted}
-            onPress={() => this.props.navigation.navigate('Profile')}>
+            onPress={() => this.props.navigation.navigate('Daily')}>
             <Image
               source={{ uri: 'https://i.ibb.co/7XjSBM2/buttontext.png' }}
               style={{ height: 27.1, width: 187 }}
@@ -45,7 +45,7 @@ class ProfileScreen extends React.Component {
               style = {styles.navButton}
               onPress={() => this.props.navigation.navigate('Profile')}>
               <Image
-                source={{ uri: 'https://i.ibb.co/4YhStXj/profile.png' }}
+                source={{ uri: 'https://i.ibb.co/C0j9FxB/dog.png' }}
                 style={{ height: 50, width: 50 }}
               ></Image>
             </TouchableOpacity>
@@ -102,7 +102,7 @@ class DailyScreen extends React.Component {
               style = {styles.navButton}
               onPress={() => this.props.navigation.navigate('Daily')}>
                 <Image
-                  source={{ uri: 'https://i.ibb.co/kJrw0zq/paw.png' }}
+                  source={{ uri: 'https://i.ibb.co/0mjBFN8/pawprint.png' }}
                   style={{ height: 50, width: 50 }}
                 ></Image>
             </TouchableOpacity>
