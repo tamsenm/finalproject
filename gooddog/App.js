@@ -42,8 +42,10 @@ class ProfileScreen extends React.Component {
               source = {{uri: 'https://i.ibb.co/7Xm4kkp/pitbull.png'}}
               style = {{height: 100, width: 100}}
             ></Image>
-            <Text>Name: {this.state.name}</Text>
-            <Text>Breed: {this.state.breed}</Text>
+            <View style = {styles.profHeadText}>
+              <Text>Name: {this.state.name}</Text>
+              <Text>Breed: {this.state.breed}</Text>
+            </View>
           </View>
           <View style = {styles.profContent}>
             <Text>Gender: {this.state.gender}</Text>
@@ -199,11 +201,7 @@ export default class App extends React.Component {
   constructor() {
        super();
        this.state = {
-        name: "Chum",
-        breed: "Labrador Retriever",
-        gender: "male",
-        birth: "11/11/2018",
-        vax: "idk yet",
+
        };
   }
 
@@ -244,6 +242,17 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: 'center',
     },
+    profHeader: {
+      flex: 1,
+      flexDirection: 'column'
+    },
+    profContent: {
+      flex: 7,
+      flexDirection: 'row',
+    },
+    profHeadText: {
+      flexDirection: 'row',
+    }
     profileF: {
         flex: 1,
         alignItems: "center",
