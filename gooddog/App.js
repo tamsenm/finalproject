@@ -37,7 +37,8 @@ class ProfileScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style = {styles.content}>
-          <Text>Profile</Text>
+          <View style = {styles.}
+
         </View>
         <View style={styles.footer}>
           <View style={styles.profileF}>
