@@ -201,7 +201,11 @@ export default class App extends React.Component {
   constructor() {
        super();
        this.state = {
-
+         name: "Chum",
+         breed: "Labrador Retriever",
+         gender: "male",
+         birth: "11/11/2018",
+         vax: "idk yet",
        };
   }
 
