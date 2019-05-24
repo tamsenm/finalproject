@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text, Button, TouchableOpacity, StyleSheet} from 'react-native';
+import { View, TouchableHighlight, Image, Text, Button, TouchableOpacity, StyleSheet} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 class OpenScreen extends React.Component {
@@ -37,8 +37,15 @@ class ProfileScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style = {styles.content}>
-          <View style = {styles.}
-
+          <View style = {styles.profHeader}>
+            <Image
+              source = {{uri: 'https://i.ibb.co/7Xm4kkp/pitbull.png'}}
+              style = {{height: 100, width: 100}}
+            ></Image>
+            <Text>Name {this.state.name}</Text>
+          </View>
+          <View style = {styles.profContent}>
+          </View>
         </View>
         <View style={styles.footer}>
           <View style={styles.profileF}>
