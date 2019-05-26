@@ -2,6 +2,14 @@ import React from 'react';
 import { View, TouchableHighlight, Image, Text, Button, TouchableOpacity, StyleSheet} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
+export default class App extends React.Component {
+
+
+  render() {
+    return (<AppContainer />);
+  }
+}
+
 class OpenScreen extends React.Component {
   static navigationOptions = {
     header:null
@@ -33,6 +41,13 @@ class ProfileScreen extends React.Component {
   static navigationOptions = {
     header:null
   };
+  state = {
+         name: "Chum",
+         breed: "Labrador Retriever",
+         gender: "male",
+         birth: "11/11/2018",
+         vax: "idk yet",
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -197,23 +212,6 @@ const AppNavigator = createStackNavigator(
 );
 const AppContainer = createAppContainer(AppNavigator);
 
-export default class App extends React.Component {
-  constructor() {
-       super();
-       this.state = {
-         name: "Chum",
-         breed: "Labrador Retriever",
-         gender: "male",
-         birth: "11/11/2018",
-         vax: "idk yet",
-       };
-  }
-
-  render() {
-    return <AppContainer />;
-  }
-}
-
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -245,6 +243,7 @@ const styles = StyleSheet.create({
         flex: 9,
         justifyContent: "center",
         alignItems: 'center',
+        flexDirection: 'row'
     },
     profHeader: {
       flex: 1,
@@ -256,7 +255,7 @@ const styles = StyleSheet.create({
     },
     profHeadText: {
       flexDirection: 'row',
-    }
+    },
     profileF: {
         flex: 1,
         alignItems: "center",
