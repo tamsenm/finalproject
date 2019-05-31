@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, TouchableHighlight, Image, Text, Button, TouchableOpacity, StyleSheet} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
 export default class App extends React.Component {
 
