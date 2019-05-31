@@ -3,8 +3,6 @@ import { View, TouchableHighlight, Image, Text, Button, TouchableOpacity, StyleS
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 export default class App extends React.Component {
-
-
   render() {
     return (<AppContainer />);
   }
@@ -46,7 +44,7 @@ class ProfileScreen extends React.Component {
          breed: "Labrador Retriever",
          gender: "male",
          birth: "11/11/2018",
-         vax: "idk yet",
+         vax: "n/a",
   }
   render() {
     return (
@@ -113,7 +111,7 @@ class DailyScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style = {styles.content}>
-          <Text>Daily</Text>
+          <Text>in progress</Text>
         </View>
         <View style={styles.footer}>
           <View style={styles.profileF}>
@@ -156,11 +154,19 @@ class HabitsScreen extends React.Component {
   static navigationOptions = {
     header:null
   };
+  state = {
+         walk: ["6:00am", "8:00pm"],
+         food: ["7:00am", "1:00pm", "7:00pm"],
+         medicine: ["7:00am"],
+         walks: ["9:00am", "4:00pm"],
+         playtime: ["5:00pm"],
+         water: ["7:00am", "11:00am", "3:00pm", "7:00pm"],
+  }
   render() {
     return (
       <View style={styles.container}>
         <View style = {styles.content}>
-          <Text>Habits</Text>
+          <Text>WALK {this.state.walk.length} times: {this.state.walk}</Text>
         </View>
         <View style={styles.footer}>
           <View style={styles.profileF}>
@@ -243,7 +249,7 @@ const styles = StyleSheet.create({
         flex: 9,
         justifyContent: "center",
         alignItems: 'center',
-        flexDirection: 'row'
+        flexDirection: 'column'
     },
     profHeader: {
       flex: 1,
@@ -251,10 +257,10 @@ const styles = StyleSheet.create({
     },
     profContent: {
       flex: 7,
-      flexDirection: 'row',
+      flexDirection: 'column',
     },
     profHeadText: {
-      flexDirection: 'row',
+      flexDirection: 'column',
     },
     profileF: {
         flex: 1,
