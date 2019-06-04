@@ -118,15 +118,65 @@ class ProfileScreen extends React.Component {
 }
 
 class DailyScreen extends React.Component {
+  state = {
+    firstOpen: true,
+  }
+  findstyle = () => {
+    if (this.state.firstOpen) {
+      return styles.habDescTextBox
+    } else {
+      return styles.habDescTBPress
+    }
+  }
+  cleartodo  = () => {
+    this.setState({
+      firstOpen: false,
+    })
+  }
   static navigationOptions = {
     header:null
   };
   render() {
     return (
       <View style={styles.container}>
-        <View style = {styles.content}>
-          <Text>in progress</Text>
-        </View>
+          <View style = {styles.content}>
+            <Text>​​​</Text>
+            <Text>​​​</Text>
+            <View style = {styles.profHeader}>
+              <Text>                                        </Text>
+              <View style = {styles.profHeadText}>
+                <Text> </Text>
+                <Text> </Text>
+                <Text style = {styles.habitsHeadTextBox}>Daily Tasks</Text>
+              </View>
+              <Text>                                        </Text>
+            </View>
+            <Text style = {styles.profHeadTextBox}>​​​</Text>
+            <View style = {styles.profContent}>
+              <TouchableOpacity
+                onPress={this.cleartodo}><Text style = {this.findstyle()}>6:00am walk</Text></TouchableOpacity>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}>7:00am food</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}>7:00am medicine</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}>7:00am water</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}>11:00am water</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}>1:00pm food</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}>3:00pm water</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}>5:00pm playtime</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}>7:00pm food</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}>7:00pm water</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}>8:00pm walk</Text>
+            </View>
+          </View>
         <View style={styles.footer}>
           <View style={styles.profileF}>
             <TouchableOpacity
@@ -169,19 +219,41 @@ class HabitsScreen extends React.Component {
     header:null
   };
   state = {
-         walk: ["6:00am", "8:00pm"],
-         food: ["7:00am", "1:00pm", "7:00pm"],
+         walk: ["6:00am ", "8:00pm"],
+         food: ["7:00am ", "1:00pm ", "7:00pm"],
          medicine: ["7:00am"],
-         walks: ["9:00am", "4:00pm"],
          playtime: ["5:00pm"],
-         water: ["7:00am", "11:00am", "3:00pm", "7:00pm"],
+         water: ["7:00am ", "11:00am ", "3:00pm ", "7:00pm"],
   }
   render() {
     return (
       <View style={styles.container}>
-        <View style = {styles.content}>
-          <Text>WALK {this.state.walk.length} times: {this.state.walk}</Text>
-        </View>
+          <View style = {styles.content}>
+            <Text>​​​</Text>
+            <Text>​​​</Text>
+            <View style = {styles.profHeader}>
+              <Text>                                        </Text>
+              <View style = {styles.profHeadText}>
+                <Text> </Text>
+                <Text> </Text>
+                <Text style = {styles.habitsHeadTextBox}>Habits</Text>
+              </View>
+              <Text>                                        </Text>
+            </View>
+            <Text style = {styles.profHeadTextBox}>​​​</Text>
+            <Text style = {styles.profHeadTextBox}>​​​</Text>
+            <View style = {styles.profContent}>
+              <Text style = {styles.habDescTextBox}><Text style = {styles.habitsTitle}>WALK:</Text> {this.state.walk.length} times - {this.state.walk}</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}><Text style = {styles.habitsTitle}>FOOD:</Text> {this.state.food.length} times - {this.state.food}</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}><Text style = {styles.habitsTitle}>MEDICINE:</Text> {this.state.medicine.length} times - {this.state.medicine}</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}><Text style = {styles.habitsTitle}>PLAYTIME:</Text> {this.state.playtime.length} times - {this.state.playtime}</Text>
+              <Text> </Text>
+              <Text style = {styles.habDescTextBox}><Text style = {styles.habitsTitle}>WATER:</Text> {this.state.water.length} times - {this.state.water}</Text>
+            </View>
+          </View>
         <View style={styles.footer}>
           <View style={styles.profileF}>
             <TouchableOpacity
@@ -218,7 +290,6 @@ class HabitsScreen extends React.Component {
     );
   }
 }
-
 const AppNavigator = createStackNavigator(
   {
     Profile: ProfileScreen,
@@ -280,8 +351,20 @@ const styles = StyleSheet.create({
     profHeadTextBox: {
       fontSize: 23,
     },
+    habitsHeadTextBox: {
+      fontSize: 36,
+    },
     profDescTextBox: {
       fontSize: 21,
+    },
+    habDescTextBox: {
+      color: '#5e959a',
+      fontSize: 26,
+      backgroundColor: '#cddfe0',
+    },
+    habDescTBPress: {
+      color: '#ffffff',
+      backgroundColor: '#ffffff'
     },
     profVaxTextBox: {
       fontSize: 21,
@@ -296,6 +379,10 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center"
+    },
+    habitsTitle: {
+      color: '#5e959a',
+      fontSize: 26
     },
     habitsF: {
         flex: 1,
