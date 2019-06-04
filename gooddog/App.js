@@ -45,26 +45,39 @@ class ProfileScreen extends React.Component {
          breed: "Labrador Retriever",
          gender: "male",
          birth: "11/11/2018",
-         vax: "n/a",
+         vax: ["link1", "link2", "link3"],
   }
   render() {
     return (
       <View style={styles.container}>
         <View style = {styles.content}>
+          <Text>​​​</Text>
+          <Text>​​​</Text>
           <View style = {styles.profHeader}>
+            <Text>   </Text>
             <Image
               source = {{uri: 'https://i.ibb.co/7Xm4kkp/pitbull.png'}}
               style = {{height: 100, width: 100}}
             ></Image>
+            <Text>       </Text>
             <View style = {styles.profHeadText}>
-              <Text>Name: {this.state.name}</Text>
-              <Text>Breed: {this.state.breed}</Text>
+              <Text>​​​</Text>
+              <Text>​​​</Text>
+              <Text style = {styles.profHeadTextBox}>Name: {this.state.name}</Text>
+              <Text style = {styles.profHeadTextBox}>Breed: {this.state.breed}</Text>
             </View>
+            <Text>   </Text>
           </View>
+          <Text style = {styles.profHeadTextBox}>​​​</Text>
+          <Text style = {styles.profHeadTextBox}>​​​</Text>
           <View style = {styles.profContent}>
-            <Text>Gender: {this.state.gender}</Text>
-            <Text>Birthday: {this.state.birth}</Text>
-            <Text>Vaccinations: {this.state.vax}</Text>
+            <Text style = {styles.profDescTextBox}>Gender: {this.state.gender}</Text>
+            <Text style = {styles.profHeadTextBox}>​​​</Text>
+            <Text style = {styles.profDescTextBox}>Birthday: {this.state.birth}</Text>
+            <Text style = {styles.profHeadTextBox}>​​​</Text>
+            <Text style = {styles.profDescTextBox}>Vaccinations:</Text>
+            <Text style = {styles.profVaxTextBox}>  view file 1</Text>
+            <Text style = {styles.profVaxTextBox}>  view file 2</Text>
           </View>
         </View>
         <View style={styles.footer}>
@@ -253,15 +266,26 @@ const styles = StyleSheet.create({
         flexDirection: 'column'
     },
     profHeader: {
-      flex: 1,
-      flexDirection: 'column'
+      flex: 2,
+      flexDirection: 'row',
+      backgroundColor: '#badcdf'
     },
     profContent: {
-      flex: 7,
+      flex: 9,
       flexDirection: 'column',
     },
     profHeadText: {
       flexDirection: 'column',
+    },
+    profHeadTextBox: {
+      fontSize: 23,
+    },
+    profDescTextBox: {
+      fontSize: 21,
+    },
+    profVaxTextBox: {
+      fontSize: 21,
+      color: '#6fb6bb'
     },
     profileF: {
         flex: 1,
